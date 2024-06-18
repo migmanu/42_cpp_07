@@ -6,7 +6,7 @@
 /*   By: jmigoya- <jmigoya-@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 10:31:12 by jmigoya-          #+#    #+#             */
-/*   Updated: 2024/06/12 15:46:47 by migmanu          ###   ########.fr       */
+/*   Updated: 2024/06/18 14:22:09 by jmigoya-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ int main(void)
 		arr[2] = 'c';
 		std::cout << "Print elements" << std::endl;
 		iter(arr, 3, print<char>);
+		delete[] arr;
 	}
 	// TEMPLATE ARRAY
 	{
@@ -81,9 +82,11 @@ int main(void)
 	}
 
 	// 42 TESTS
+	std::cout << std::endl << std::endl << "42 TESTS" << std::endl;
 	int tab[] = {0, 1, 2, 3, 4};
 	Awesome tab2[5];
 
+	std::cout << "Print elements" << std::endl;
 	iter(tab, 5, print<const int>);
 	iter(tab2, 5, print<Awesome>);
 	return 0;
